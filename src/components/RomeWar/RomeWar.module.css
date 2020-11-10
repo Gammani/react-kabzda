@@ -1,0 +1,53 @@
+.heroStyle {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+
+.bootStyle {
+    position: absolute;
+    left: 136px;
+    top: 273px;
+}
+
+.armorStyle {
+    position: absolute;
+    left: 131px;
+    top: 151px;
+}
+
+.armorPStyle {
+    position: absolute;
+    left: 133px;
+    top: 179px;
+}
+
+.helmetStyle {
+    position: absolute;
+    left: 153px;
+    top: 106px;
+}
+
+.swordStyle {
+    position: absolute;
+    left: 185px;
+    top: 109px;
+}
+
+.shieldStyle {
+    position: absolute;
+    left: 123px;
+    top: 146px;
+}
+
+.armor2 {
+    position: absolute;
+    left: 139px;
+    top: 147px;
+}
+
+.luk {
+    position: absolute;
+    left: 127px;
+    top: 155px;
+}
