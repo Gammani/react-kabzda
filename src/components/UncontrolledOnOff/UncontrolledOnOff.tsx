@@ -1,11 +1,9 @@
 import React, {useState} from "react";
 
 
-
-
 function UncontrolledOnOff() {
 
-    let [on, setOn] = useState(false);
+    let [switchOn, setSwitchOn] = useState(false);
 
     const onStyle = {
         width: "30px",
@@ -13,7 +11,7 @@ function UncontrolledOnOff() {
         border: "1px solid black",
         display: "inline-block",
         padding: "2px",
-        backgroundColor: on ? "green" : "white"
+        backgroundColor: switchOn ? "green" : "white"
     };
     const offStyle = {
         width: "30px",
@@ -22,7 +20,7 @@ function UncontrolledOnOff() {
         display: "inline-block",
         marginLeft: "2px",
         padding: "2px",
-        backgroundColor: on ? "white" : "red"
+        backgroundColor: switchOn ? "white" : "red"
     };
     const indicatorStyle = {
         width: "10px",
@@ -31,16 +29,25 @@ function UncontrolledOnOff() {
         border: "1px solid black",
         display: "inline-block",
         marginLeft: "5px",
-        backgroundColor: on ? "green" : "red"
+        backgroundColor: switchOn ? "green" : "red"
     };
 
- return (
-     <div>
-         <div style={onStyle} onClick={() => {setOn(true)}}>On</div>
-         <div style={offStyle} onClick={() => {setOn(false)}}>Off</div>
-         <div style={indicatorStyle}></div>
-     </div>
- )
+    const onClicked = () => {
+        setSwitchOn(true)
+    }
+    const offClicked = () => {
+        setSwitchOn(false)
+    }
+
+    return (
+        <div>
+            <div style={onStyle} onClick={onClicked}>On
+            </div>
+            <div style={offStyle} onClick={offClicked}>Off
+            </div>
+            <div style={indicatorStyle}></div>
+        </div>
+    )
 }
 
 
