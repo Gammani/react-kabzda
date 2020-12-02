@@ -1,9 +1,13 @@
 import React, {useState} from "react";
 
+type PropsType = {
+    onChange: (on: boolean) => void
+    defaultOn?: boolean
+}
 
-function UncontrolledOnOff() {
+export function UncontrolledOnOff(props: PropsType) {
 
-    let [switchOn, setSwitchOn] = useState(false);
+    let [switchOn, setSwitchOn] = useState(props.defaultOn ? props.defaultOn : false);
 
     const onStyle = {
         width: "30px",
@@ -34,9 +38,11 @@ function UncontrolledOnOff() {
 
     const onClicked = () => {
         setSwitchOn(true)
+        props.onChange(true)
     }
     const offClicked = () => {
         setSwitchOn(false)
+        props.onChange(false)
     }
 
     return (
@@ -49,6 +55,3 @@ function UncontrolledOnOff() {
         </div>
     )
 }
-
-
-export default UncontrolledOnOff;
